@@ -1,0 +1,19 @@
+.bg-body-tertiary {
+    background-color: #1F1F25;
+    color: white;
+    padding: 15px 36px;
+  }
+  
+.logo {
+    font-family: 'Monomaniac One', sans-serif;
+    font-size: 32px;
+}
+
+span {
+    text-decoration: none;
+}
+
+.search {
+    background-color: #1F1F25;
+    color: #F88A24;
+}
