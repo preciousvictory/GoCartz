@@ -1,15 +1,31 @@
 import React from "react";
-import { Nav, Navbar, Container, Button, Form, NavDropdown } from "react-bootstrap";
+import {
+  Nav,
+  Navbar,
+  Container,
+  Button,
+  Form,
+  NavDropdown,
+  InputGroup,
+} from "react-bootstrap";
 import "../css/Nav.css";
 
-const Nav = () => {
+const Nav1 = () => {
   return (
-    <Navbar className="bg-body-tertiary">
-      <Container>
+    <Navbar className="Nav1">
+      <Container className="ml-10">
         <Navbar.Brand href="#home" className="logo">
           <span style={{ color: "white" }}>Go</span>
           <span style={{ color: "#F88A24" }}>Cartz</span>
         </Navbar.Brand>
+        <Nav className="justify-content-end" activeKey="/home">
+          <Nav.Item>
+            <Nav.Link href="#">Cart</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#">Account</Nav.Link>
+          </Nav.Item>
+        </Nav>
       </Container>
     </Navbar>
   );
@@ -17,76 +33,100 @@ const Nav = () => {
 
 export function Nav2() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary Nav2">
       <Container fluid>
-        <Form className="d-flex">
+        <InputGroup className="input-group">
           <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2"
+            placeholder="Find your products"
             aria-label="Search"
+            // aria-describedby="basic-addon2"
+            className="s"
           />
-          <Button className='search'>Search</Button>
-        </Form>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <NavDropdown title="WOMEN" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+          <Button className="searchbtn s" id="button-addon2">
+            Search
+          </Button>
+        </InputGroup>
+
+        <Navbar.Toggle aria-controls="navbar-dark-example" />
+        <Navbar.Collapse id="navbar-dark-example">
+          <Nav className="left" lg={12}>
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="WOMEN"
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="MEN" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="MEN"
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="GADGET" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="KIDS"
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="GROCERIES" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="GADGETS"
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="KIDS" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="GROCERIES"
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
@@ -96,6 +136,6 @@ export function Nav2() {
   );
 }
 
-export default Nav;
+export default Nav1;
 // #F88A24
 // black - 1F1F25

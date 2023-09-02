@@ -1,9 +1,3 @@
-.bg-body-tertiary {
-    background-color: #1F1F25;
-    color: white;
-    padding: 15px 36px;
-  }
-  
 .logo {
     font-family: 'Monomaniac One', sans-serif;
     font-size: 32px;
@@ -13,7 +7,40 @@ span {
     text-decoration: none;
 }
 
-.search {
+.Nav1 {
+    background-color: #1F1F25;
+    color: white;
+}
+
+.Nav1 a {
+    color: white;
+}
+
+.Nav1 a:hover {
+    color: #F88A24;
+}
+
+.Nav2 {
+    color: #1F1F25;
+    background-color: white;
+    padding: 15px 36px;
+    margin: 0 0 10px 0;
+    box-shadow: 1px 2px 6px #323235c7;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.searchbtn {
     background-color: #1F1F25;
     color: #F88A24;
+}
+
+.s {
+    border-radius: 50px;
+}
+
+.input-group {
+    width: 40% !important;
 }
