@@ -1,19 +1,19 @@
 import React from "react";
 import useFetch from "./useFetch";
-// import { Nav } from "react-bootstrap";
-// import "../css/Nav.css";
+import ProductCard from "./ProductCard";
 
 export function ProductData() {
-    const [isLoading, error, data] = useFetch('https://fakestoreapi.com/products/1');
+    const { data, Loading, error } = useFetch('https://fakestoreapi.com/products');
     
-    if (isLoading) return 'Is Loading...';
-    if (error) return 'error';
+    if (Loading) return 'Is Loading...';
+    if (error) return 'Error';
     return (
         <>
         {data &&
         data.map((item) => {
           return (
-          <p key={item.id}>{item.title}</p>);
+        //   <p key={item.id}>{item.title}</p>);
+        <ProductCard key={item.id} item={item}  />);
         })}
         </>
     
