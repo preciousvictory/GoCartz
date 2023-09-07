@@ -1,0 +1,44 @@
+.Blog {
+    margin: 40px 0;
+    padding: 40px 60px;
+}
+
+.align {
+    justify-content: center;
+    align-items: center;
+}
+
+.Title {
+    font-size: 24px;
+    color: #1F1F25;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.Title:hover {
+    color: #F88A24;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------- */
+.Newsletter {
+    background-color: #F88A24;
+    padding: 40px 60px;
+    color: white;
+}
+
+.submitbtn {
+    background-color: #1F1F25;
+    color: #F88A24;
+    border: 0;
+}
+
+.submitbtn:hover {
+    background-color: #1F1F25;
+    color: white;
+    border: 1px solid #1F1F25;
+}
+
+.mail {
+    border-radius: 50px;
+}

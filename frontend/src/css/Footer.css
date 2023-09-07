@@ -1,0 +1,31 @@
+.Footer {
+    background-color: #1F1F25;
+    color: white;
+    padding: 40px 60px;
+    margin: 0;
+}
+
+.Footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.Footer a:hover {
+    color: #F88A24;
+}
+
+.logo {
+    font-family: 'Monomaniac One', sans-serif;
+    font-size: 40px;
+}
+
+.shop {
+    background-color: #1F1F25;
+    border: 0;
+    padding: 0;
+}
+
+.socials {
+    font-size: 32px;
+    margin-right: 5px;
+}

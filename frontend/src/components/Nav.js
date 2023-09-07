@@ -13,12 +13,35 @@ import "../css/Nav.css";
 const Nav1 = () => {
   return (
     <Navbar className="Nav1">
-      <Container className="ml-10">
+      <Container>
         <Navbar.Brand href="#home" className="logo">
           <span style={{ color: "white" }}>Go</span>
           <span style={{ color: "#F88A24" }}>Cartz</span>
         </Navbar.Brand>
         <Nav className="justify-content-end" activeKey="/home">
+        <Nav.Item>
+            <Nav.Link href="#">Reservations</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#">Blog</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+          <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="Shops"
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav.Item>
           <Nav.Item>
             <Nav.Link href="#">Cart</Nav.Link>
           </Nav.Item>

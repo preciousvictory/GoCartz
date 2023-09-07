@@ -1,17 +1,25 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { useState } from 'react';
 import Nav1 from './components/Nav';
 import { Nav2 } from './components/Nav';
+import Footer from './components/Footer'
+import Blog from './components/Blog'
+import { Newsletter } from './components/Blog'
+import AllProducts from './components/AllProducts';
 
 function App() {
-  let [counter, setCounter] = useState(0);
   return (
     <div className="App">
       <Nav1 />
       <Nav2 />
-      <button onClick={() => setCounter(counter + 1)}>Click me</button>
+
+      <AllProducts />
+      
+      <Blog />
+      <Newsletter />
+      <Footer />
     </div>
+
   );
 }
 
