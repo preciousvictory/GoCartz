@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, InputGroup, Form, Button, Card } from "react-bootstrap";
 import "../css/Blog.css";
-import Image from '../images/hamburger2.jpg';
+import Image from '../assets/images/hamburger2.jpg';
 
 export function Blog() {
   return (

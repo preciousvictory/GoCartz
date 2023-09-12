@@ -1,38 +1,28 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Container, Row, Col } from 'react-bootstrap';
-import Nav1 from './components/Nav';
-import { Nav2 } from './components/Nav';
-import Footer from './components/Footer'
-import Blog from './components/Blog'
-import { Newsletter } from './components/Blog'
-import AllProducts from './components/AllProducts';
-import { Filters } from './components/Search';
-import Search from './components/Search';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Cart from './pages/cart';
+import Home from './pages/home';
+import Footer from './components/Footer';
 
 
 function App() {
   return (
-    <Container fluid className="App p-0">
-      <Nav1 />
-      <Nav2 />
+    <div className='App'>
+      <Router>
+        <Navbar />
 
-      <Row>
-        <Col xs={2} id="filter-wrapper">
-          <Search />
-          <Filters />
-        </Col>
-        <Col xs={10} id="products-wrapper">
-          <AllProducts />
-        </Col>
-      </Row>
-      
-      
-      <Blog />
-      <Newsletter />
-      <Footer />
-    </Container>
+        <Routes>
+          <Route path='/' element={<Home />} />
+            <Route path='/likes' element={<Home />} />
+            <Route path='/cart' element={<Cart />} />
+          <Route path='/user' element={<Home />} />
+        </Routes>
 
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

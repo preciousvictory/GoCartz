@@ -10,6 +10,7 @@ span {
 .Nav1 {
     background-color: #1F1F25;
     color: white;
+    width: 100%;
 }
 
 .Nav1 a {
@@ -17,6 +18,10 @@ span {
 }
 
 .Nav1 a:hover {
+    color: #F88A24;
+}
+
+.Nav1 .icons:hover {
     color: #F88A24;
 }
 

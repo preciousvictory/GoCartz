@@ -1,31 +1,43 @@
 import React from "react";
-import {
-  Nav,
-  Navbar,
-  Container,
-  Button,
-  Form,
-  NavDropdown,
-  InputGroup,
-} from "react-bootstrap";
+import { LinkContainer } from 'react-router-bootstrap';
+import { Nav, Navbar, Container, Button, Form, NavDropdown, InputGroup,} from "react-bootstrap";
+import { MdFavorite, MdShoppingCart, MdAccountCircle } from "react-icons/md";
 import "../css/Nav.css";
 
 const Nav1 = () => {
   return (
-    <Navbar className="Nav1">
+    <Navbar expand="lg" className="Nav1">
       <Container>
-        <Navbar.Brand href="#home" className="logo">
-          <span style={{ color: "white" }}>Go</span>
-          <span style={{ color: "#F88A24" }}>Cartz</span>
-        </Navbar.Brand>
-        <Nav className="justify-content-end" activeKey="/home">
-        <Nav.Item>
-            <Nav.Link href="#">Reservations</Nav.Link>
-          </Nav.Item>
+        <LinkContainer to="/">
+          <Navbar.Brand href="#home" className="logo">
+            <span style={{ color: "white" }}>Go</span>
+            <span style={{ color: "#F88A24" }}>Cartz</span>
+          </Navbar.Brand>
+        </LinkContainer>
+        
+        <Nav className="justify-content-end" activeKey="/">
           <Nav.Item>
-            <Nav.Link href="#">Blog</Nav.Link>
+            <Nav.Link href="/shops">Shops</Nav.Link>
           </Nav.Item>
+
           <Nav.Item>
+            <Nav.Link href="/likes"><MdFavorite size={24} className="icons"/></Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link href="/cart"><MdShoppingCart size={24} className="icons"/></Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link href="/shops"><MdAccountCircle size={24} className="icons"/></Nav.Link>
+          </Nav.Item>
+        </Nav>
+      </Container>
+    </Navbar>
+  );
+};
+
+/* <Nav.Item>
           <NavDropdown
               id="nav-dropdown-dark-example"
               title="Shops"
@@ -41,18 +53,7 @@ const Nav1 = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Cart</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Account</Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Container>
-    </Navbar>
-  );
-};
+          </Nav.Item> */
 
 export function Nav2() {
   return (
