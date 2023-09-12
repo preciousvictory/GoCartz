@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/GoCartz/static/css/main.118f1c2e.css",
+    "main.js": "/GoCartz/static/js/main.c449c080.js",
+    "static/media/hamburger2.jpg": "/GoCartz/static/media/hamburger2.2b3706d415e21d50f728.jpg",
+    "index.html": "/GoCartz/index.html",
+    "main.118f1c2e.css.map": "/GoCartz/static/css/main.118f1c2e.css.map",
+    "main.c449c080.js.map": "/GoCartz/static/js/main.c449c080.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.118f1c2e.css",
+    "static/js/main.c449c080.js"
+  ]
+}
