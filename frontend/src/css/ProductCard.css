@@ -1,0 +1,39 @@
+
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: contain;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.rating {
+    margin-bottom: 6px;
+}
+
+.rating span, .star {
+    font-size: 10px;
+}
+
+.star {
+    color: #F88A24;
+}
+
+.add_to_cart {
+    width: 100%;
+    background: #F88A24;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+
+.cart {
+    color: "#FFFFFF";
+    font-size: "10px";
+    padding-right: 6px;
+}
+/* #1F1F25 */

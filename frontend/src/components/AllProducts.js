@@ -1,32 +1,33 @@
 import React from "react";
-import useFetch from "./useFetch";
+// import useFetch from "./useFetch";
+import { Container, Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard";
-
-export function ProductData() {
-    const { data, Loading, error } = useFetch('https://fakestoreapi.com/products');
-    
-    if (Loading) return 'Is Loading...';
-    if (error) return 'Error';
-    return (
-        <>
-        {data &&
-        data.map((item) => {
-          return (
-        //   <p key={item.id}>{item.title}</p>);
-        <ProductCard key={item.id} item={item}  />);
-        })}
-        </>
-    
-    );
-}
-
-// npm i -S use-http
+import products from '../data/data.json'
 
 const AllProducts = () => {
+    // const { data, Loading, error } = useFetch('https://fakestoreapi.com/products');
+    
+    // if (Loading) return 'Is Loading...';
+    // if (error) return 'Error';
+
+    // const rows = [];
+    
+    // for (const product in data) {
+    //     rows.push(
+    //     <Col key={product.id} lg={3} xs={6}><ProductCard key={product.id} item={product}  /></Col>
+    // );
+    // }
+
     return (
-        <>
-            <ProductData />
-        </>
+        <Container>
+            <Row md={3} lg={{ cols: 5, gutter: 2}}>
+                {products.map((product) => {
+                    return (
+                    <Col key={product.id} lg={3} xs={6} md={4} className="p-3 h-100"><ProductCard key={product.id} item={product} /></Col>
+                    );
+                })}
+            </Row>
+        </Container>
     );
 }
 

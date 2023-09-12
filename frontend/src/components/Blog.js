@@ -18,7 +18,6 @@ export function Blog() {
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content.
               </Card.Text>
-              
             </Card.Body>
           </Card>
         </Col>
