@@ -18,12 +18,12 @@ const ProductCard = ({ item }) => {
             ))}
             <span>{item.rating.count} reviews</span>
           </div>
-          <button className="add_to_cart" onClick={() => addToCart(product)}><FaShoppingCart className="cart"/>Add to cart</button>
+          <button className="add_to_cart"><FaShoppingCart className="cart"/>Add to cart</button>
         </Card.Body>
       </Card>
   );
 };
-
+{/*  onClick={() => addToCart(product)} */}
 
 function Rating(rating, idx) {
   if (idx < rating.rate && !(idx === Math.floor(rating.rate))) return <FaStar key={idx} className='star'/>;
