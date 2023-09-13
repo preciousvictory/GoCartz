@@ -17,19 +17,27 @@ const Nav1 = () => {
         
         <Nav className="justify-content-end" activeKey="/">
           <Nav.Item>
-            <Nav.Link href="/shops">Shops</Nav.Link>
+            <LinkContainer to="/shops">
+              <Nav.Link>Shops</Nav.Link>
+            </LinkContainer>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link href="/likes"><MdFavorite size={24} className="icons"/></Nav.Link>
+            <LinkContainer to="/likes">
+              <Nav.Link><MdFavorite size={24} className="icons"/></Nav.Link>
+            </LinkContainer>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link href="/cart"><MdShoppingCart size={24} className="icons"/></Nav.Link>
+            <LinkContainer to="/cart">
+              <Nav.Link><MdShoppingCart size={24} className="icons"/></Nav.Link>
+            </LinkContainer>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link href="/shops"><MdAccountCircle size={24} className="icons"/></Nav.Link>
+            <LinkContainer to="/">
+              <Nav.Link><MdAccountCircle size={24} className="icons"/></Nav.Link>
+            </LinkContainer>
           </Nav.Item>
         </Nav>
       </Container>

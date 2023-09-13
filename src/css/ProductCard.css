@@ -43,6 +43,11 @@
 }
 
 .add_to_cart:hover {
+    background: #1F1F25;
+    color: #F88A24;
+}
+
+.added_to_cart:hover {
     background: #f88b249c;
 }
 

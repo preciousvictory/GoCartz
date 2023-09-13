@@ -10,7 +10,7 @@
     text-decoration: none;
 }
 
-.Footer a:hover {
+.Footer .links:hover {
     color: #F88A24;
 }
 
@@ -25,7 +25,25 @@
     padding: 0;
 }
 
+.shop:hover, .shop {
+    background-color: #1F1F25;
+    color: #F88A24;
+}
+
+.dropdown {
+    background-color: #1F1F25;
+    color: #ffffff;
+}
+
+.links {
+    border: 0;
+    padding: 0;
+    background-color: #1F1F25;
+    color: #ffffff;
+    display: block;
+}
+
 .socials {
-    font-size: 32px;
+    font-size: 24px;
     margin-right: 5px;
 }

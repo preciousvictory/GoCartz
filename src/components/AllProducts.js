@@ -2,7 +2,7 @@ import React from "react";
 // import useFetch from "./useFetch";
 import { Container, Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard";
-import products from '../data/data.json'
+import { PRODUCTS } from '../data/data.js'
 
 const AllProducts = () => {
     // const { data, Loading, error } = useFetch('https://fakestoreapi.com/products');
@@ -21,7 +21,7 @@ const AllProducts = () => {
     return (
         <Container>
             <Row md={3} lg={{ cols: 5, gutter: 2}}>
-                {products.map((product) => {
+                {PRODUCTS.map((product) => {
                     return (
                     <Col key={product.id} lg={3} xs={6} md={4} className="p-3 h-100"><ProductCard key={product.id} item={product} /></Col>
                     );

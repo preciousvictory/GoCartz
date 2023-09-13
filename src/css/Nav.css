@@ -21,6 +21,10 @@ span {
     color: #F88A24;
 }
 
+.Nav1 .icons {
+    color: #ffffff;
+}
+
 .Nav1 .icons:hover {
     color: #F88A24;
 }

@@ -1,4 +1,8 @@
-[
+import product9 from '../assets/images/image9.jpg';
+import product13 from '../assets/images/image13.jpg';
+
+
+export const PRODUCTS = [
     {
         "id": 1,
         "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -96,6 +100,18 @@
         }
     },
     {
+        "id": 9,
+        "title": "Red off shoulder flare short gown",
+        "price": 120,
+        "description": "Best ready made gown, full flare",
+        "category": "electronics",
+        "image": product9,
+        "rating": {
+            "rate": 4.8,
+            "count": 479
+        }
+    },
+    {
         "id": 10,
         "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
         "price": 109,
@@ -103,7 +119,7 @@
         "category": "electronics",
         "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
         "rating": {
-            "rate": 2.9,
+            "rate": 4.3,
             "count": 470
         }
     },
@@ -129,6 +145,18 @@
         "rating": {
             "rate": 4.8,
             "count": 400
+        }
+    },
+    {
+        "id": 13,
+        "title": "Black Ladies Heel",
+        "price": 40,
+        "description": "5 Inch heels easy  and comfortable to wear",
+        "category": "Fashion Female shoe heel",
+        "image": product13,
+        "rating": {
+            "rate": 3.7,
+            "count": 500
         }
     },
     {

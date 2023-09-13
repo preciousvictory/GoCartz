@@ -1,4 +1,5 @@
 import React from "react";
+import { LinkContainer } from 'react-router-bootstrap';
 import { Row, Col, Navbar, Dropdown } from "react-bootstrap";
 import { FaInstagramSquare, FaTwitterSquare, FaFacebookSquare, FaLinkedin  } from "react-icons/fa";
 import "../css/Footer.css";
@@ -16,47 +17,46 @@ const Footer = () => {
 
         <Col>
           <h6>Navigation</h6>
-          <div>
-            <a href="#/action-1">Home</a>
-          </div>
-          <div>
-            <a href="#/action-1">Blog</a>
-          </div>
-          <div>
-            <a href="#/action-1">Reservations</a>
-          </div>
-          <Dropdown>
+          
+            <LinkContainer to="/">
+              <button className="links">Home</button>
+            </LinkContainer>
+            <LinkContainer to="/">
+              <button className="links">Blog</button>
+            </LinkContainer>
+            
+            <Dropdown>
             <Dropdown.Toggle className="shop">Shops</Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu className="dropdown">
               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </Dropdown.Menu>
-
-            <div>
-              <a href="#/action-1">About us</a>
-            </div>
-            <div>
-              <a href="#/action-1">Contact us</a>
-            </div>
           </Dropdown>
+
+            <LinkContainer to="/">
+              <button className="links">About Us</button>
+            </LinkContainer>
+            <LinkContainer to="/">
+              <button className="links">Contact Us</button>
+            </LinkContainer>
         </Col>
 
         <Col>
           <h6>Account</h6>
-          <div>
-            <a href="#/action-1">My Account</a>
-          </div>
-          <div>
-            <a href="#/action-1">My Cart</a>
-          </div>
-          <div>
-            <a href="#/action-1">My Favorite</a>
-          </div>
-          <div>
-            <a href="#/action-1">Order History</a>
-          </div>
+            <LinkContainer to="/">
+              <button className="links">My Account</button>
+            </LinkContainer>
+            <LinkContainer to="/cart">
+              <button className="links">My Cart</button>
+            </LinkContainer>
+            <LinkContainer to="/likes">
+              <button className="links">My Favorite</button>
+            </LinkContainer>
+            <LinkContainer to="/">
+              <button className="links">Order History</button>
+            </LinkContainer>
         </Col>
 
         <Col xs={2}>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../context/Context";
 import { Card } from "react-bootstrap";
 import "../css/ProductCard.css";
 import { FaRegStar, FaShoppingCart, FaStar, FaStarHalfAlt  } from "react-icons/fa";
@@ -6,6 +7,7 @@ import { FaRegStar, FaShoppingCart, FaStar, FaStarHalfAlt  } from "react-icons/f
 
 
 const ProductCard = ({ item }) => {
+  const { addToCart, cartItems } = useContext(CartContext);
   return (
       <Card className="h-100 card">
         <Card.Img variant="top" src={item.image} className="card-img-top"/>
@@ -18,17 +20,22 @@ const ProductCard = ({ item }) => {
             ))}
             <span>{item.rating.count} reviews</span>
           </div>
-          <button className="add_to_cart"><FaShoppingCart className="cart"/>Add to cart</button>
+          <button className="add_to_cart" onClick={() => addToCart(item.id )}><FaShoppingCart className="cart"/>Add to cart {checkInCart(item.id, cartItems)}</button>
         </Card.Body>
       </Card>
   );
 };
-{/*  onClick={() => addToCart(product)} */}
 
 function Rating(rating, idx) {
   if (idx < rating.rate && !(idx === Math.floor(rating.rate))) return <FaStar key={idx} className='star'/>;
   else if (idx < rating.rate && idx === Math.floor(rating.rate)) return <FaStarHalfAlt key={idx} className='star'/>;
   return <FaRegStar key={idx} className='star'/>;
+}
+
+function checkInCart(id, cartItems) {
+  if (cartItems[id] > 0) {
+    return <span>({cartItems[id]})</span>;
+  }
 }
 
 export default ProductCard;
