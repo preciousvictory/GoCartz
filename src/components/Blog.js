@@ -12,7 +12,6 @@ export function Blog() {
           <Card>
             <Card.Img variant="top" src={Image} className="card-img"/>
             <Card.Body>
-              {/* <Card.Title>Card title</Card.Title> */}
               <Card.Link href="#/action" className="Title">Best restuarant Hambuger is sold in Nigeria</Card.Link>
               <Card.Text>
                 This is a longer card with supporting text below as a natural
