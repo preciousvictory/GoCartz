@@ -7,21 +7,22 @@ import "../css/Footer.css";
 const Footer = () => {
   return (
     <div className="Footer">
-      <Row xs={1} lg={4}>
-        <Col xs={4}>
-          <Navbar.Brand href="#home" className="logo">
-            <span style={{ color: "white" }}>Go</span>
-            <span style={{ color: "#F88A24" }}>Cartz</span>
-          </Navbar.Brand>
+      <Row xs={2} lg={4}>
+        <Col xs={12} className="logo">
+          <LinkContainer to="/GoCartz">
+            <Navbar.Brand href="#home" className="logo">
+              <span style={{ color: "white" }}>Go</span>
+              <span style={{ color: "#F88A24" }}>Cartz</span>
+            </Navbar.Brand>
+          </LinkContainer>
         </Col>
 
-        <Col>
+        <Col className="navigation">
           <h6>Navigation</h6>
-          
-            <LinkContainer to="/">
+            <LinkContainer to="/GoCartz">
               <button className="links">Home</button>
             </LinkContainer>
-            <LinkContainer to="/">
+            <LinkContainer to="/GoCartz">
               <button className="links">Blog</button>
             </LinkContainer>
             
@@ -35,31 +36,31 @@ const Footer = () => {
             </Dropdown.Menu>
           </Dropdown>
 
-            <LinkContainer to="/">
+            <LinkContainer to="/GoCartz">
               <button className="links">About Us</button>
             </LinkContainer>
-            <LinkContainer to="/">
+            <LinkContainer to="/GoCartz">
               <button className="links">Contact Us</button>
             </LinkContainer>
         </Col>
 
-        <Col>
+        <Col className="account">
           <h6>Account</h6>
-            <LinkContainer to="/">
+            <LinkContainer to="/GoCartz">
               <button className="links">My Account</button>
             </LinkContainer>
-            <LinkContainer to="/cart">
+            <LinkContainer to="/GoCartz/cart">
               <button className="links">My Cart</button>
             </LinkContainer>
-            <LinkContainer to="/likes">
+            <LinkContainer to="/GoCartz/likes">
               <button className="links">My Favorite</button>
             </LinkContainer>
-            <LinkContainer to="/">
+            <LinkContainer to="/GoCartz">
               <button className="links">Order History</button>
             </LinkContainer>
         </Col>
 
-        <Col xs={2}>
+        <Col xs={12} md={4} className="followUs">
           <h6>Follow Us</h6>
           <a href="https://www.facebook.com/victoria.abiodunomoniyi"><FaFacebookSquare className='socials'/></a>
           <a href="#/instagram"><FaInstagramSquare className='socials'/></a>

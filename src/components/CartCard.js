@@ -70,7 +70,7 @@ const AllCart = () => {
           
           <Row>
             <Col className='p-0 mt-4'>
-              <button className='shopping' onClick={() => navigate("/")}><FaArrowLeft /><span> continue shopping</span></button>
+              <button className='shopping' onClick={() => navigate("/GoCartz")}><FaArrowLeft /><span> continue shopping</span></button>
             </Col>
           </Row>
         </Col>

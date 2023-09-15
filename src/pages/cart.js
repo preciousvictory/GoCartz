@@ -22,7 +22,7 @@ function Cart() {
         <Row className='empty'>
           <Col>
             <h1 className='text'>Your Cart is empty</h1>
-            <button className='shopping' onClick={() => navigate("/")}><FaArrowLeft /><span> continue shopping</span></button>
+            <button className='shopping' onClick={() => navigate("/GoCartz")}><FaArrowLeft /><span> continue shopping</span></button>
           </Col>
         </Row>
       }

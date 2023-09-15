@@ -10,7 +10,7 @@ export function Blog() {
       {Array.from({ length: 3 }).map((_, idx) => (
         <Col key={idx}>
           <Card>
-            <Card.Img variant="top" src={Image} />
+            <Card.Img variant="top" src={Image} className="card-img"/>
             <Card.Body>
               {/* <Card.Title>Card title</Card.Title> */}
               <Card.Link href="#/action" className="Title">Best restuarant Hambuger is sold in Nigeria</Card.Link>

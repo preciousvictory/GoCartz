@@ -21,19 +21,20 @@
 
 .shop {
     background-color: #1F1F25;
+    color: #fff;
     border: 0;
     padding: 0;
 }
 
-.shop:hover, .shop {
+.shop:hover {
     background-color: #1F1F25;
     color: #F88A24;
 }
 
-.dropdown {
+/* .dropdown {
     background-color: #1F1F25;
     color: #ffffff;
-}
+} */
 
 .links {
     border: 0;
@@ -46,4 +47,18 @@
 .socials {
     font-size: 24px;
     margin-right: 5px;
+}
+
+@media screen and (max-width: 780px) {
+    .Footer {
+        padding: 40px 30px;
+    }
+
+    .logo {
+        padding: 0 0 20px 0;
+    }
+
+    .followUs, .navigation, .account {
+        padding: 10px 0;
+    }
 }

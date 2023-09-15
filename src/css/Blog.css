@@ -15,6 +15,11 @@
     text-decoration: none;
 }
 
+.card-img {
+    height: 100% !important;
+    padding: 0 !important;
+}
+
 .Title:hover {
     color: #F88A24;
     text-decoration: underline;
@@ -41,4 +46,14 @@
 
 .mail {
     border-radius: 50px;
+}
+
+@media screen and (max-width: 780px) {
+    .Blog {
+        padding: 40px 30px;
+    }
+
+    .Newsletter {
+        padding: 60px 30px;
+    }
 }

@@ -8,34 +8,34 @@ const Nav1 = () => {
   return (
     <Navbar expand="lg" className="Nav1">
       <Container>
-        <LinkContainer to="/">
+        <LinkContainer to="/GoCartz">
           <Navbar.Brand href="#home" className="logo">
             <span style={{ color: "white" }}>Go</span>
             <span style={{ color: "#F88A24" }}>Cartz</span>
           </Navbar.Brand>
         </LinkContainer>
         
-        <Nav className="justify-content-end" activeKey="/">
+        <Nav  activeKey="/">
           <Nav.Item>
-            <LinkContainer to="/shops">
+            <LinkContainer to="/GoCartz/shops">
               <Nav.Link>Shops</Nav.Link>
             </LinkContainer>
           </Nav.Item>
 
           <Nav.Item>
-            <LinkContainer to="/likes">
+            <LinkContainer to="/GoCartz/likes">
               <Nav.Link><MdFavorite size={24} className="icons"/></Nav.Link>
             </LinkContainer>
           </Nav.Item>
 
           <Nav.Item>
-            <LinkContainer to="/cart">
+            <LinkContainer to="/GoCartz/cart">
               <Nav.Link><MdShoppingCart size={24} className="icons"/></Nav.Link>
             </LinkContainer>
           </Nav.Item>
 
           <Nav.Item>
-            <LinkContainer to="/">
+            <LinkContainer to="/GoCartz">
               <Nav.Link><MdAccountCircle size={24} className="icons"/></Nav.Link>
             </LinkContainer>
           </Nav.Item>

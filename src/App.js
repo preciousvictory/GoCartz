@@ -15,11 +15,11 @@ function App() {
         <Router>
           <Navbar />
 
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/likes' element={<Home />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/user' element={<Home />} />
+          <Routes> 
+            <Route path='/GoCartz' element={<Home />} />
+            <Route path='/GoCartz/likes' element={<Home />} />
+            <Route path='/GoCartz/cart' element={<Cart />} />
+            <Route path='/GoCartz/user' element={<Home />} />
           </Routes>
 
           <Footer />

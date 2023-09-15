@@ -1,6 +1,7 @@
 .logo {
     font-family: 'Monomaniac One', sans-serif;
     font-size: 32px;
+    padding: 0;
 }
 
 span {
@@ -29,6 +30,11 @@ span {
     color: #F88A24;
 }
 
+.navbar-nav {
+    flex-direction: row;
+    gap: 10px;
+}
+
 .Nav2 {
     color: #1F1F25;
     background-color: white;
@@ -52,4 +58,11 @@ span {
 
 .Nav2 .input-group {
     width: 40% !important;
+}
+
+@media screen and (max-width: 780px) {
+    .logo {
+        font-size: 32px !important;
+        padding: 0 !important;
+    }
 }
