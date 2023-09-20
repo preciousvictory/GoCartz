@@ -35,34 +35,69 @@ span {
     gap: 10px;
 }
 
-.Nav2 {
-    color: #1F1F25;
-    background-color: white;
-    padding: 15px 36px;
-    margin: 0 0 10px 0;
-    box-shadow: 1px 2px 6px #323235c7;
-}
-
-.navbar-collapse {
-    justify-content: flex-end;
-}
-
 .searchbtn {
+    background-color: #F88A24;
+    color: #1F1F25;
+    border: 0;
+}
+
+.searchbtn:hover {
+    color: #ffffff;
+    background-color: #F88A24;
+    font-size: 18px;
+}
+
+.searchbtn2 {
     background-color: #1F1F25;
     color: #F88A24;
+    border: 0;
+}
+
+.searchbtns:hover {
+    background-color: #F88A24;
+    color: #1F1F25;
 }
 
 .s {
     border-radius: 50px;
 }
 
-.Nav2 .input-group {
-    width: 40% !important;
+
+
+/* Nav2 display */
+.Nav2 {
+    color: #1F1F25;
+    background-color: white;
+    padding: 15px 36px;
+    margin: 0 0 10px 0;
+    box-shadow: 1px 2px 6px #323235c7;
+    display: none;
 }
 
-@media screen and (max-width: 780px) {
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.Nav1 .input-group {
+    max-width: 40%;
+}
+
+.Nav2 .input-group {
+    width: 100% !important;
+}
+
+@media screen and (max-width: 680px) {
     .logo {
         font-size: 32px !important;
         padding: 0 !important;
+    }
+
+    .Nav2 {
+        display: block;
+        padding: 15px 25px;
+    }
+
+    .Nav1 .input-group {
+        display: none;
     }
 }

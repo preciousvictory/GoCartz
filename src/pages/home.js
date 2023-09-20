@@ -26,6 +26,7 @@ function Home() {
       
       <Blog />
       <Newsletter />
+      <Footer />
     </Container>
 
   );

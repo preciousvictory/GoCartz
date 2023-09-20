@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/Context";
-import { Card } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import "../css/ProductCard.css";
-import { FaRegStar, FaShoppingCart, FaStar, FaStarHalfAlt  } from "react-icons/fa";
+import { FaHeart, FaRegStar, FaShoppingCart, FaStar, FaStarHalfAlt  } from "react-icons/fa";
 // import { MdFavoriteBorder } from "react-icons/md";
 
 
 const ProductCard = ({ item }) => {
-  const { addToCart, cartItems } = useContext(CartContext);
+  const { addToCart, cartItems, addFavoriteItem} = useContext(CartContext);
   return (
       <Card className="h-100 card">
         <Card.Img variant="top" src={item.image} className="card-img-top"/>
@@ -20,7 +20,15 @@ const ProductCard = ({ item }) => {
             ))}
             <span>{item.rating.count} reviews</span>
           </div>
-          <button className="add_to_cart" onClick={() => addToCart(item.id )}><FaShoppingCart className="cart"/>Add to cart {checkInCart(item.id, cartItems)}</button>
+          <Row className="add-row">
+            <Col xs={10}>
+              <button className="add_to_cart" onClick={() => addToCart(item.id)}><FaShoppingCart className="cart-icon"/>Add to cart {checkInCart(item.id, cartItems)}</button>
+            </Col>
+             <Col xs={2} className="p-0">
+              <button className="add_to_favourite" onClick={() => addFavoriteItem(item.id)}><FaHeart className="heart-icon"/></button>
+             </Col>
+          </Row>
+         
         </Card.Body>
       </Card>
   );

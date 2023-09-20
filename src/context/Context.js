@@ -14,8 +14,18 @@ const getDefaultCart = () => {
     return cart;  
 }
 
+const getDefaultFavorite = () => {
+    let Favorite = {}
+    for (let i = 1; i < PRODUCTS.length + 1; i++) {
+        Favorite[i] = 0;
+    }
+    return Favorite;  
+}
+
 export const Context = (props) => {
     const [cartItems, setCartItem] = useState(getDefaultCart());
+    const [favoriteItems, setFavoriteItem] = useState(getDefaultFavorite());
+
 
     const addToCart = (itemID) => {
         setCartItem((prev) => ({...prev, [itemID]: prev[itemID] + 1}));
@@ -48,12 +58,21 @@ export const Context = (props) => {
           c += 1;
         }
         return total;
-      }
+    }
+
+    const addFavoriteItem = (itemID) => {
+      setFavoriteItem((prev) => ({...prev, [itemID]: prev[itemID] + 1}));
+    }
+
+    const removeFavoriteItem = (itemID) => {
+      setFavoriteItem((prev) => ({...prev, [itemID]: prev[itemID] - 1}));
+    }
 
     // Create Context Value
-    const contextValue = {cartItems, addToCart, removeFromCart, deleteCart, updateCartItemCount, gettotalPrice};
+    const contextValue = {cartItems, addToCart, removeFromCart, deleteCart, updateCartItemCount, gettotalPrice, favoriteItems, addFavoriteItem, removeFavoriteItem};
 
     console.log(cartItems);
+    console.log(favoriteItems);
     return (
       <CartContext.Provider value={contextValue}>
         {props.children}

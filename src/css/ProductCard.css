@@ -32,7 +32,7 @@
     color: #F88A24;
 }
 
-.add_to_cart {
+.add_to_cart, .add_to_favourite {
     width: 100%;
     background: #F88A24;
     color: white;
@@ -40,7 +40,7 @@
     border-radius: 5px;
 }
 
-.add_to_cart:hover {
+.add_to_cart:hover, .add_to_favourite:hover {
     background: #1F1F25;
     color: #F88A24;
 }
@@ -49,11 +49,14 @@
     background: #f88b249c;
 }
 
-.cart {
-    color: "#FFFFFF";
-    font-size: "10px";
+.heart-icon {
+    font-size: 13px;
+}
+
+.cart-icon {
     padding-right: 6px;
 }
+
 /* #1F1F25 */
 
 @media screen and (max-width: 450px) {
