@@ -11,17 +11,17 @@ const ProductCard = ({ item }) => {
   return (
       <Card className="h-100 card">
         <Card.Img variant="top" src={item.image} className="card-img-top"/>
-        <Card.Body>
+        <Card.Body className="p-2">
           <Card.Title className="title">{item.title}</Card.Title>
           <Card.Text className="price">${item.price}</Card.Text>
           <div className="rating">
             {Array.from({ length: 5 }).map((_, idx) => (
                 Rating(item.rating, idx)
             ))}
-            <span>{item.rating.count} reviews</span>
+            <span>   {item.rating.count} reviews</span>
           </div>
           <Row className="add-row">
-            <Col xs={10}>
+            <Col xs={9} className="p-0">
               <button className="add_to_cart" onClick={() => addToCart(item.id)}><FaShoppingCart className="cart-icon"/>Add to cart {checkInCart(item.id, cartItems)}</button>
             </Col>
              <Col xs={2} className="p-0">

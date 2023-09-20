@@ -1,5 +1,5 @@
 .card-img-top {
-    padding: 10px;
+    padding: 6px;
     width: 100%;
     height: 15vw;
     object-fit: contain;
@@ -32,12 +32,23 @@
     color: #F88A24;
 }
 
+.add-row {
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+}
+
 .add_to_cart, .add_to_favourite {
     width: 100%;
     background: #F88A24;
     color: white;
     border: 0;
     border-radius: 5px;
+}
+
+.add_to_cart {
+    font-size: 0.9rem !important;
+    height: 26px;
 }
 
 .add_to_cart:hover, .add_to_favourite:hover {

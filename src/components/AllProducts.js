@@ -23,7 +23,7 @@ const AllProducts = () => {
             <Row md={3} lg={{ cols: 5, gutter: 2}}>
                 {PRODUCTS.map((product) => {
                     return (
-                    <Col key={product.id} lg={3} xs={6} md={4} className="p-3 h-100"><ProductCard key={product.id} item={product} /></Col>
+                    <Col key={product.id} lg={2.5} xs={6} md={4} className="p-3 h-100"><ProductCard key={product.id} item={product} /></Col>
                     );
                 })}
             </Row>
