@@ -1,10 +1,11 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Footer from '../components/Footer'
 import Blog from '../components/Blog'
 import { Newsletter } from '../components/Blog'
 import AllProducts from '../components/AllProducts';
 import { Nav2 }  from '../components/Nav';
+import SideBar from '../components/SideBar';
 
 
 function Home() {
@@ -21,9 +22,16 @@ function Home() {
       </Row> */}
     
       <Nav2 />
-      <AllProducts />
 
-      
+      <Row>
+        <Col xs={3}>
+          <SideBar />
+        </Col>
+        <Col >
+          <AllProducts />
+        </Col>
+      </Row>
+  
       <Blog />
       <Newsletter />
       <Footer />

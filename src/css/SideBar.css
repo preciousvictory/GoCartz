@@ -1,0 +1,10 @@
+.sidebar {
+    position: sticky;
+    left: 0;
+    border-left: 1px solid ;
+    box-shadow: 1px 2px 6px #323235c7;
+    color: #565656;
+    height: 100vh;
+    /* color: #1F1F25; */
+    /* color: #F88A24; */
+}
