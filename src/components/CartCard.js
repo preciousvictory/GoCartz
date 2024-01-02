@@ -7,7 +7,6 @@ import "../css/CartCard.css";
 import { FaMinusSquare, FaPlusSquare, FaTrash, FaArrowLeft } from 'react-icons/fa';
 import { CartContext } from '../context/Context';
 
-
 const CartCard = ({ item }) => {
   const { cartItems, addToCart, removeFromCart, deleteCart, updateCartItemCount } = useContext(CartContext);
 
@@ -82,7 +81,7 @@ const AllCart = () => {
           </div>
           <div className='total'>
             <p>Total</p>
-            <p className='total-price'>${totalAmount}</p>
+            <p className='total-price'>${totalAmount.toFixed(2)}</p>
           </div>
           <div className='checkout'>
             <LinkContainer to="/">

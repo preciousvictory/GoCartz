@@ -4,7 +4,6 @@ import Footer from '../components/Footer'
 import Blog from '../components/Blog'
 import { Newsletter } from '../components/Blog'
 import AllProducts from '../components/AllProducts';
-import { Nav2 }  from '../components/Nav';
 import SideBar from '../components/SideBar';
 
 
@@ -19,9 +18,8 @@ function Home() {
         <Col xs={10} id="products-wrapper">
           <AllProducts />
         </Col>
-      </Row> */}
-    
-      <Nav2 />
+      </Row>
+      <SearchBar /> */}
 
       <Row>
         <Col xs={3}>

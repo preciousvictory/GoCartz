@@ -17,6 +17,7 @@ const AllProducts = () => {
     //     <Col key={product.id} lg={3} xs={6}><ProductCard key={product.id} item={product}  /></Col>
     // );
     // }
+    
 
     return (
         <Container>

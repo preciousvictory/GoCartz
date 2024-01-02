@@ -1,0 +1,12 @@
+.remove_saved, .move_to_cart {
+    width: 100%;
+    background: #F88A24;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+
+.move_to_cart:hover .remove_saved:hover {
+    background: #1F1F25;
+    color: #F88A24;
+}

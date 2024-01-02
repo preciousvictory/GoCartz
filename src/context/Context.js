@@ -25,7 +25,12 @@ const getDefaultFavorite = () => {
 export const Context = (props) => {
     const [cartItems, setCartItem] = useState(getDefaultCart());
     const [favoriteItems, setFavoriteItem] = useState(getDefaultFavorite());
+    const [searchValue, setSearch] = useState("");
+    const [data, setData] = useState(PRODUCTS);
 
+    const loadUserData = async () => {
+      setData(PRODUCTS);
+    }
 
     const addToCart = (itemID) => {
         setCartItem((prev) => ({...prev, [itemID]: prev[itemID] + 1}));
@@ -61,15 +66,26 @@ export const Context = (props) => {
     }
 
     const addFavoriteItem = (itemID) => {
-      setFavoriteItem((prev) => ({...prev, [itemID]: prev[itemID] + 1}));
+      if (favoriteItems[itemID] < 1) {
+        setFavoriteItem((prev) => ({...prev, [itemID]: prev[itemID] + 1}));
+      }
     }
 
     const removeFavoriteItem = (itemID) => {
       setFavoriteItem((prev) => ({...prev, [itemID]: prev[itemID] - 1}));
     }
 
+    const moveToCart = (itemID) => {
+        addToCart(itemID);
+        removeFavoriteItem(itemID);
+    }
+
+    const setSearchValue = (value) => {
+      setSearch(value);
+    }
+
     // Create Context Value
-    const contextValue = {cartItems, addToCart, removeFromCart, deleteCart, updateCartItemCount, gettotalPrice, favoriteItems, addFavoriteItem, removeFavoriteItem};
+    const contextValue = {data, setData, loadUserData, cartItems, addToCart, removeFromCart, deleteCart, updateCartItemCount, gettotalPrice, favoriteItems, addFavoriteItem, removeFavoriteItem, moveToCart, searchValue, setSearchValue};
 
     console.log(cartItems);
     console.log(favoriteItems);

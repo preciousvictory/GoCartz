@@ -1,10 +1,55 @@
 .sidebar {
     position: sticky;
     left: 0;
+    top: 0;
+    padding: 10px;
     border-left: 1px solid ;
     box-shadow: 1px 2px 6px #323235c7;
-    color: #565656;
+    color: black;
     height: 100vh;
+    /* background-color: #1F1F25; */
     /* color: #1F1F25; */
     /* color: #F88A24; */
+}
+
+.gender {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.gender .check {
+    flex: 40%;
+}
+
+input[type='checkbox'] {
+    border: 1px solid #1F1F25;
+}
+
+.category_btn {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    border: 0;
+    align-items: center;
+}
+
+/* .check {
+    border: 1px solid #1F1F25;
+} */
+
+.category_btn:hover, .check:hover {
+    background-color: white;
+    color: #F88A24;
+}
+
+.category p {
+    margin: 0;
+    padding-left: 5px;
+}
+
+.category p:hover {
+    color: #F88A24;
+    text-decoration: underline;
 }

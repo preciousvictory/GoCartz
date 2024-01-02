@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Cart from './pages/cart';
 import Home from './pages/home';
+import Likes from './pages/likes';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
 
           <Routes> 
             <Route path='/GoCartz' element={<Home />} />
-            <Route path='/GoCartz/likes' element={<Home />} />
+            <Route path='/GoCartz/likes' element={<Likes />} />
             <Route path='/GoCartz/cart' element={<Cart />} />
             <Route path='/GoCartz/user' element={<Home />} />
           </Routes>
