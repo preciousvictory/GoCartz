@@ -5,6 +5,7 @@ import ProductCard from "./ProductCard";
 import { PRODUCTS } from '../data/data.js'
 
 const AllProducts = () => {
+    const { data } = useContext(CartContext);
     // const { data, Loading, error } = useFetch('https://fakestoreapi.com/products');
     
     // if (Loading) return 'Is Loading...';
