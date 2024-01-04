@@ -7,8 +7,7 @@ import "../css/SearchBar.css";
 import { PRODUCTS } from '../data/data.js';
 
 export function SearchBar() {
-    const { searchValue, setSearchValue, data, setData } = useContext(CartContext);
-    // const { productQuery,  } = useContext(CartContext);
+    const { searchValue, setSearchValue, setfilteredData } = useContext(CartContext);
 
     console.log(searchValue);
 
@@ -17,14 +16,13 @@ export function SearchBar() {
         const filterdata = [];
         PRODUCTS.map((product) => {
             const query = product.title.toLowerCase();
-            if (query.includes(searchValue.toLowerCase())) {
+            if (query.indexOf(searchValue.toLowerCase()) !== -1) {
               filterdata.push(product);
             }
         })
         console.log('filter', filterdata)
-        setData(filterdata);
-        console.log('data', data);
-        setSearchValue("");
+        setfilteredData(filterdata);
+        // setSearchValue("");
     }
 
     return (

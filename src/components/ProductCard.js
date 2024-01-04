@@ -7,9 +7,10 @@ import { FaHeart, FaRegStar, FaShoppingCart, FaStar, FaStarHalfAlt  } from "reac
 
 
 const ProductCard = ({ item }) => {
-  const { addToCart, cartItems, addFavoriteItem} = useContext(CartContext);
+  const { addToCart, addFavoriteItem} = useContext(CartContext);
+  // cartItems,
   return (
-      <Card className="h-100 card">
+      <Card className="card">
         <Card.Img variant="top" src={item.image} className="card-img-top"/>
         <Card.Body className="p-2">
           <Card.Title className="title">{item.title}</Card.Title>
@@ -22,7 +23,8 @@ const ProductCard = ({ item }) => {
           </div>
           <Row className="add-row">
             <Col xs={9} className="p-0">
-              <button className="add_to_cart" onClick={() => addToCart(item.id)}><FaShoppingCart className="cart-icon"/>Add to cart {checkInCart(item.id, cartItems)}</button>
+              <button className="add_to_cart" onClick={() => addToCart(item.id)}><FaShoppingCart className="cart-icon"/>Add to cart</button>
+              {/* {checkInCart(item.id, cartItems)} */}
             </Col>
              <Col xs={2} className="p-0">
               <button className="add_to_favourite" onClick={() => addFavoriteItem(item.id)}><FaHeart className="heart-icon"/></button>
@@ -40,10 +42,10 @@ function Rating(rating, idx) {
   return <FaRegStar key={idx} className='star'/>;
 }
 
-function checkInCart(id, cartItems) {
-  if (cartItems[id] > 0) {
-    return <span>({cartItems[id]})</span>;
-  }
-}
+// function checkInCart(id, cartItems) {
+//   if (cartItems[id] > 0) {
+//     return <span>({cartItems[id]})</span>;
+//   }
+// }
 
 export default ProductCard;

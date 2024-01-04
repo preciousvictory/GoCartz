@@ -7,11 +7,13 @@ import { Breadcrumb, Nav, NavDropdown } from "react-bootstrap";
 export function Filters() {
     const groups = {
         'Clothing': ['Shirt', 'Pant/Trouser', 'Skirt', 'Coat & Jackets'],
-        'Accessories': ['Wrist-watch', 'Face Cap', 'Scarfs'],
-        'Jewellery': ['Necklace', 'Earings', 'Bracelets'],
+        'Foot Wear': ['Snickers', 'Heels', 'Flat Shoes', 'Sandals'],         
         'Bags': ['Purse', 'Backpack', 'Handbag'],
-        'Electronics': ['Laptop', 'Phone'],
-        'Foot Wear': ['Snickers', 'Heels', 'Flat Shoes', 'Sandals']         
+        'Cosmetics': ['lipstick', 'lotion', 'cream', 'makeup', 'powder'],
+        'Jewelries': ['Necklace', 'Earings', 'Bracelets', 'Bangles'],
+        'Wristwatch': ['Wrist-watch'],
+        'Accessories': ['Face Cap', 'Scarfs'],
+        'gagdet': ['Laptop', 'Phone'],
     }
     const categories = Object.keys(groups);
 
@@ -59,10 +61,4 @@ function CategorySection(groups, category) {
     );
 }
 
-const Search = () => {
-    return (
-      <>hi</>  
-    );
-}
-
-export default Search;
+export default Filters;

@@ -3,23 +3,33 @@
     left: 0;
     top: 0;
     padding: 10px;
-    border-left: 1px solid ;
     box-shadow: 1px 2px 6px #323235c7;
+    background-color: white;
     color: black;
-    height: 100vh;
+    font-size: 12px;
     /* background-color: #1F1F25; */
     /* color: #1F1F25; */
     /* color: #F88A24; */
+}
+
+.gender label, .gender input, .Price label, .Price input {
+    cursor: pointer;
 }
 
 .gender {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    cursor: pointer;
 }
 
 .gender .check {
     flex: 40%;
+}
+
+.form-check-input:checked {
+    background-color: #1F1F25;
+    border-color: #1F1F25;
 }
 
 input[type='checkbox'] {
@@ -27,7 +37,7 @@ input[type='checkbox'] {
 }
 
 .category_btn {
-    background-color: white;
+    background-color: transparent;
     color: black;
     display: flex;
     flex-direction: row;
@@ -39,9 +49,13 @@ input[type='checkbox'] {
     border: 1px solid #1F1F25;
 } */
 
-.category_btn:hover, .check:hover {
-    background-color: white;
+.category_btn:hover, .check:hover, .check:active {
+    background-color: transparent;
     color: #F88A24;
+}
+
+.sidebar .btn {
+    background-color: transparent;
 }
 
 .category p {

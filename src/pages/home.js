@@ -22,7 +22,7 @@ function Home() {
       <SearchBar /> */}
 
       <Row>
-        <Col xs={3}>
+        <Col xs={4} md={3} lg={2}>
           <SideBar />
         </Col>
         <Col >
