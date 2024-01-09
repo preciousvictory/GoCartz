@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/GoCartz/static/css/main.a2946a8b.css",
-    "main.js": "/GoCartz/static/js/main.52a1f2d9.js",
+    "main.css": "/GoCartz/static/css/main.6ef5c5a8.css",
+    "main.js": "/GoCartz/static/js/main.56de4408.js",
     "static/media/image9.jpg": "/GoCartz/static/media/image9.915a08966fd4be9f36e4.jpg",
     "static/media/image13.jpg": "/GoCartz/static/media/image13.ba50667af17fc8b1338d.jpg",
     "static/media/hamburger2.jpg": "/GoCartz/static/media/hamburger2.2b3706d415e21d50f728.jpg",
     "index.html": "/GoCartz/index.html",
-    "main.a2946a8b.css.map": "/GoCartz/static/css/main.a2946a8b.css.map",
-    "main.52a1f2d9.js.map": "/GoCartz/static/js/main.52a1f2d9.js.map"
+    "main.6ef5c5a8.css.map": "/GoCartz/static/css/main.6ef5c5a8.css.map",
+    "main.56de4408.js.map": "/GoCartz/static/js/main.56de4408.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2946a8b.css",
-    "static/js/main.52a1f2d9.js"
+    "static/css/main.6ef5c5a8.css",
+    "static/js/main.56de4408.js"
   ]
 }
