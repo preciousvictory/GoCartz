@@ -88,7 +88,7 @@ export const Context = (props) => {
   };
 
   const setSearchValue = (value) => {
-    setSearch(value);
+    setSearch(value); 
   };
 
   const addSelectedCategory = (value) => {
