@@ -5,6 +5,7 @@ import Blog from '../components/Blog'
 import { Newsletter } from '../components/Blog'
 import AllProducts from '../components/AllProducts';
 import SideBar from '../components/SideBar';
+import "../css/SearchBar.css";
 
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
         </Col>
       </Row>
       <SearchBar /> */}
-
+      
       <Row>
         <Col xs={4} md={3} lg={2}>
           <SideBar />

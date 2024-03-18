@@ -1,6 +1,6 @@
 
 /* SearchBar display */
-.SearchBar {
+Nav .SearchBar {
     color: #1F1F25;
     width: 40%;
 }
@@ -45,5 +45,12 @@
     .SearhBar {
         display: block;
         padding: 15px 25px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* SearchBar display */
+    .Nav1 .SearchBar {
+        display: none;
     }
 }

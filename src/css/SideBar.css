@@ -67,3 +67,10 @@ input[type='checkbox'] {
     color: #F88A24;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        display: none;
+    }
+    
+}

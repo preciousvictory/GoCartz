@@ -4,34 +4,39 @@
     padding: 0;
 }
 
-.navSearch {
+.smSearch .SearchBar{
     width: 100%;
-    display: none;
+}
+
+.smSearch {
+    background-color: white;
+    width: 100%;
+    margin: 10px;
 }
 
 span {
     text-decoration: none;
 }
 
-.Nav1 {
+.NavMobile {
     background-color: #1F1F25;
     color: white;
     width: 100%;
 }
 
-.Nav1 a {
+.NavMobile a {
     color: white;
 }
 
-.Nav1 a:hover {
+.NavMobile a:hover {
     color: #F88A24;
 }
 
-.Nav1 .icons {
+.NavMobile .icons {
     color: #ffffff;
 }
 
-.Nav1 .icons:hover {
+.NavMobile .icons:hover {
     color: #F88A24;
 }
 
@@ -67,16 +72,6 @@ span {
     max-width: 40%;
 } */
 
-@media screen and (max-width: 680px) {
-    .logo {
-        font-size: 32px !important;
-        padding: 0 !important;
-    }
-
-    .Nav1 .input-group {
-        display: none;
-    }
-}
 
 @media screen and (max-width: 480px) {
     /* sidebar */
@@ -84,4 +79,7 @@ span {
         display: none;
     }
 
+    .bar {
+        display: block;
+    }    
 }

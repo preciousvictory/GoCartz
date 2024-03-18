@@ -21,6 +21,7 @@ const Nav1 = () => {
   return (
     <Navbar expand="lg" className="Nav1">
       <Container>
+
         <LinkContainer to="/GoCartz">
           <Navbar.Brand href="#home" className="logo">
             <span style={{ color: "white" }}>Go</span>

@@ -40,7 +40,6 @@ export function SearchBar() {
         </Button>
       </InputGroup>
     </Form>
-    
   );
 }  
 
