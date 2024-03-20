@@ -6,11 +6,11 @@ import { Newsletter } from '../components/Blog'
 import AllProducts from '../components/AllProducts';
 import SideBar from '../components/SideBar';
 import "../css/SearchBar.css";
-
+import MediaQuery from 'react-responsive';
 
 function Home() {
   return (
-    <Container fluid className="App p-0">
+    <Container fluid className="App">
       {/* <Row>
         <Col xs={2} id="filter-wrapper">
           <Search />
@@ -23,12 +23,21 @@ function Home() {
       <SearchBar /> */}
       
       <Row>
-        <Col xs={4} md={3} lg={2}>
-          <SideBar />
-        </Col>
-        <Col >
+        <MediaQuery minWidth={600}>
+          {/* <p>You also have a huge screen</p> */}
+          <Col className='p-0' xs={4} md={3} lg={2}>
+            <SideBar />
+          </Col>
+          <Col >
+            <AllProducts />
+          </Col>
+        </MediaQuery>
+
+        <MediaQuery maxWidth={600}>
+          {/* <p>You also have a small screen</p> */}
           <AllProducts />
-        </Col>
+        </MediaQuery>
+        
       </Row>
   
       <Blog />

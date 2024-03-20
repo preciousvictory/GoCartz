@@ -15,7 +15,7 @@ function Cart() {
   let totalAmount = gettotalPrice(PRODUCTS, cartItems);
 
   return (
-    <Container className='Cart'>
+    <Container className='Cart p-0'>
       {totalAmount > 0 ?
         <AllCart  />
       :

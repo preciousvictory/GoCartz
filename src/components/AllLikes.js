@@ -39,7 +39,7 @@ const AllLikes = () => {
           </Row>    
 
           <Row>
-            <Col className='p-0 mt-4'>
+            <Col className='p-3 mt-4'>
               <button className='shopping' onClick={() => navigate("/GoCartz")}><FaArrowLeft /><span> continue shopping</span></button>
             </Col>
           </Row>
