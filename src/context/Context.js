@@ -33,11 +33,12 @@ export const Context = (props) => {
 
 
 
-  console.log("data", filteredData);
-  console.log('category', selectedCategory);
+  // console.log("data", filteredData);
+  // console.log('category', selectedCategory);
 
   const loadUserData = async () => {
     setfilteredData(PRODUCTS);
+    setSelectedCategory('');
   };
 
   const addToCart = (itemID) => {
@@ -110,11 +111,11 @@ export const Context = (props) => {
     if (selected.includes(value) === false) {
         setSelectedPrice((prev) => [...prev, value]);
     }
-    console.log('selected', selectedPrice);
+    // console.log('selected', selectedPrice);
   }
 
   const removeFromSelected = (value) => {
-    console.log('select', selected);
+    // console.log('select', selected);
 
     for (let i = 0; i < selected.length; i++) { 
       if (selected[i] === value) { 
@@ -122,23 +123,19 @@ export const Context = (props) => {
       }
     }
 
-    console.log('selected', selected);
+    // console.log('selected', selected);
     if (selected.length === 0) {
       addToSelected('All');
     }
   }
 
   const removeFromSelectedPrice = (value) => {
-    console.log('Price', selectedPrice);
-
     for (let i = 0; i < selectedPrice.length; i++) {
       if (JSON.stringify(selectedPrice[i]) === JSON.stringify(value.split(","))) {
-        console.log('correct', selectedPrice.splice(i, 1), selectedPrice[i]);
         selectedPrice.splice(i, 1);
-        console.log('Price', selectedPrice);
       }
     }
-    console.log('selectPrice', selectedPrice);
+    // console.log('selectPrice', selectedPrice);
   }
 
 
@@ -146,13 +143,10 @@ export const Context = (props) => {
     // Filter for Gender
     const filterdata = [];
 
-    console.log('select', selected);
     addToSelected(value);
-    console.log('selected', selected);
+    // console.log('selected', selected);
 
     const select = selected;
-    select.push(value);
-    console.log(select);
 
     PRODUCTS.map((product) => {
       const query = product.category.toLowerCase();
@@ -164,7 +158,7 @@ export const Context = (props) => {
         }
       }
     });
-    console.log('filter', filterdata);
+    // console.log('filter', filterdata);
     setfilteredData(filterdata);
   }
 
@@ -172,18 +166,14 @@ export const Context = (props) => {
     // Filter for price
     const filterdata = [];
 
-    console.log('selectPrice', selectedPrice);
     addToSelectedPrice(value.split(","));
-    console.log('selectedPrice', selectedPrice);
 
     const select = selectedPrice;
     select.push(value.split(","));
-    console.log(select);
 
     PRODUCTS.map((product) => {
       const query = product.price;
       for (let i = 0; i < selectedPrice.length; i++) {
-        // console.log(i, selected);
         if (filterdata.includes(product) === false) {
           if (query > parseInt(selectedPrice[i][0]) && query < parseInt(selectedPrice[i][1])) {
             filterdata.push(product);
@@ -191,7 +181,7 @@ export const Context = (props) => {
         }
       }
     });
-    console.log('filter', filterdata);
+    // console.log('filter', filterdata);
     setfilteredData(filterdata);
   }
 
@@ -202,14 +192,12 @@ export const Context = (props) => {
     removeFromSelected(value);
     const select = selected;
     // select.push(value);
-    console.log(select);
 
     filteredData.map((product) => {
       const query = product.category.toLowerCase();
       for (let i = 0; i < select.length; i++) {
         if (query.indexOf(select[i].toLowerCase()) !== -1) {
           filterdata.push(product);
-          console.log('filter', filterdata)
         }
       }
     });
@@ -218,7 +206,7 @@ export const Context = (props) => {
       filterdata = PRODUCTS;
     }
 
-    console.log('filter', filterdata);
+    // console.log('filter', filterdata);
     setfilteredData(filterdata);
   }
 
@@ -227,10 +215,8 @@ export const Context = (props) => {
     let filterdata = [];
 
     removeFromSelectedPrice(value);
-    console.log('selectedPrice', selectedPrice);
     const select = selectedPrice;
     // select.push(value);
-    console.log(select);
 
     filteredData.map((product) => {
       const query = product.price;
@@ -247,7 +233,7 @@ export const Context = (props) => {
       filterdata = PRODUCTS;
     }
 
-    console.log('filter', filterdata);
+    // console.log('filter', filterdata);
     setfilteredData(filterdata);
   }
 
@@ -285,8 +271,8 @@ export const Context = (props) => {
     filterRemovePrice,
   };
 
-  console.log('çartItems', cartItems);
-  console.log('favouriteItems', favoriteItems);
+  // console.log('çartItems', cartItems);
+  // console.log('favouriteItems', favoriteItems);
 
   return (
     <CartContext.Provider value={contextValue}>

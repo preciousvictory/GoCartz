@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { useNavigate} from 'react-router-dom';
-// import { LinkContainer } from 'react-router-bootstrap';
 import SavedCard from './SavedCard.js';
 import { PRODUCTS } from '../data/data.js'
 import { Row, Col, Container } from 'react-bootstrap';

@@ -6,9 +6,7 @@ const filterdata = [];
 
 const Filter = () => {
     const { selected } = useContext(CartContext);
-    // const filterdata = [];
 
-    // e.preventDefault();
     PRODUCTS.map((product) => {
         const query = product.category.toLowerCase();
         for (let i = 0; i < selected.length; i++) {

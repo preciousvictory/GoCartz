@@ -4,12 +4,10 @@ import { Card, Row, Col } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import "../css/ProductCard.css";
 import { FaHeart, FaRegStar, FaShoppingCart, FaStar, FaStarHalfAlt  } from "react-icons/fa";
-// import { MdFavoriteBorder } from "react-icons/md";
 
 
 const ProductCard = ({ item }) => {
   const { addToCart, addFavoriteItem} = useContext(CartContext);
-  // cartItems,
   return (
       <Card className="card">
         <Link to={`/GoCartz/products/${item.id}`} style={{textDecoration: 'none'}}><Card.Img variant="top" src={item.image} className="card-img-top"/></Link>
@@ -25,7 +23,6 @@ const ProductCard = ({ item }) => {
           <Row className="add-row">
             <Col xs={9} className="p-0">
               <button className="add_to_cart" onClick={() => addToCart(item.id)}><FaShoppingCart className="cart-icon"/>Add to cart</button>
-              {/* {checkInCart(item.id, cartItems)} */}
             </Col>
              <Col xs={2} className="p-0">
               <button className="add_to_favourite" onClick={() => addFavoriteItem(item.id)}><FaHeart className="heart-icon"/></button>
@@ -42,11 +39,4 @@ function Rating(rating, idx) {
   else if (idx < rating.rate && idx === Math.floor(rating.rate)) return <FaStarHalfAlt key={idx} className='star'/>;
   return <FaRegStar key={idx} className='star'/>;
 }
-
-// function checkInCart(id, cartItems) {
-//   if (cartItems[id] > 0) {
-//     return <span>({cartItems[id]})</span>;
-//   }
-// }
-
 export default ProductCard;

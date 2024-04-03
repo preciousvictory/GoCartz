@@ -6,6 +6,7 @@ import { FaRegStar, FaShoppingCart, FaStar, FaStarHalfAlt  } from "react-icons/f
 
 const SavedCard = ({ item }) => {
   const { moveToCart, removeFavoriteItem } = useContext(CartContext);
+  
   return (
       <Card className="h-100 card">
         <Card.Img variant="top" src={item.image} className="card-img-top"/>

@@ -22,7 +22,6 @@ export function SearchBar() {
         })
         console.log('filter', filterdata)
         setfilteredData(filterdata);
-        // setSearchValue("");
     }
 
     return (

@@ -46,8 +46,8 @@ export function Gender() {
 }
 
 export function Category() {
-  const { selectedCategory, addSelectedCategory, setfilteredData  } = useContext(CartContext);
-  console.log('category', selectedCategory);
+  const { addSelectedCategory, setfilteredData  } = useContext(CartContext);
+  // console.log('category', selectedCategory);
 
   const handleChange = (e) => {
     addSelectedCategory(e.target.innerText);
@@ -61,10 +61,8 @@ export function Category() {
         filterdata.push(product);
       }
     })
-    console.log('filter', filterdata)
+    // console.log('filter', filterdata);
     setfilteredData(filterdata);
-
-    // removeSelectedCategory(e.target.innerText);
   }
 
   const categories = [
@@ -102,8 +100,8 @@ export function Price() {
   const { filterAddPrice, filterRemovePrice } = useContext(CartContext);
 
   const handleChange = (e) => {
-    console.log(e);
-    console.log('value', e.target.defaultValue);
+    // console.log(e);
+    // console.log('value', e.target.defaultValue);
 
     // e.target.checked === true ? addToSelected(e.target.defaultValue) : removeFromSelected(e.target.defaultValue);
     e.target.checked === true ? filterAddPrice(e.target.defaultValue) : filterRemovePrice(e.target.defaultValue);
