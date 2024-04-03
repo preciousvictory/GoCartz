@@ -1,9 +1,9 @@
-import { PRODUCTS } from "../data/data.js";
+// import { PRODUCTS } from "../data/data.js";
 
-const filteredCategoryData = (query) => {
-    let filteredProducts = PRODUCTS;
+// const filteredCategoryData = (query) => {
+//     let filteredProducts = PRODUCTS;
 
-    if () {
+//     if () {
         
-    }
-}
+//     }
+// }

@@ -8,7 +8,7 @@ import "../css/Nav.css";
 import SearchBar from "./SearchBar";
 
 const Nav1 = () => {
-  const { cartItems, favoriteItems } = useContext(CartContext);
+  const { cartItems, favoriteItems, loadUserData } = useContext(CartContext);
 
   const countItems = (Items) => {
     let c = 0;
@@ -21,8 +21,8 @@ const Nav1 = () => {
   return (
     <Navbar expand="lg" className="Nav1">
       <Container>
-
-        <LinkContainer to="/GoCartz">
+{/* onClick={loadUserData} reloadDocument */}
+        <LinkContainer onClick={loadUserData} to="/GoCartz">
           <Navbar.Brand href="#home" className="logo">
             <span style={{ color: "white" }}>Go</span>
             <span style={{ color: "#F88A24" }}>Cartz</span>

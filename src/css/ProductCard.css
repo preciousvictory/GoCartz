@@ -1,6 +1,8 @@
 .card {
     cursor: pointer;
+    color: #1F1F25;
 }
+
 .card-img-top {
     padding: 6px;
     width: 100%;
@@ -10,6 +12,7 @@
 
 .title{
     font-size: 0.7rem;
+    color: #1F1F25;
     height: 30px;
     overflow: hidden;
     display: -webkit-box;
@@ -19,7 +22,7 @@
     margin-bottom: 0;
 }
 
-.price {
+.card .price {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 0;

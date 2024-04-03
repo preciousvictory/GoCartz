@@ -29,14 +29,15 @@ export const Context = (props) => {
   const [filteredData, setfilteredData] = useState(PRODUCTS);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selected, setSelected] = useState(['All']);
+  const [selectedPrice, setSelectedPrice] = useState([]);
+
 
 
   console.log("data", filteredData);
-  console.log('cate', selectedCategory);
+  console.log('category', selectedCategory);
 
   const loadUserData = async () => {
-    // setfilteredData(PRODUCTS);
-    console.log("lud");
+    setfilteredData(PRODUCTS);
   };
 
   const addToCart = (itemID) => {
@@ -88,7 +89,7 @@ export const Context = (props) => {
   };
 
   const setSearchValue = (value) => {
-    setSearch(value); 
+    setSearch(value);
   };
 
   const addSelectedCategory = (value) => {
@@ -100,11 +101,154 @@ export const Context = (props) => {
   };
 
   const addToSelected = (value) => {
-    setSelected((prev) => [...prev, value]);
+    if (selected.includes(value) === true) {
+        setSelected((prev) => [...prev, value]);
+    }
+  }
+
+  const addToSelectedPrice = (value) => {
+    if (selected.includes(value) === false) {
+        setSelectedPrice((prev) => [...prev, value]);
+    }
+    console.log('selected', selectedPrice);
   }
 
   const removeFromSelected = (value) => {
-    setSelected(selected.filter((item) => item !== value));
+    console.log('select', selected);
+
+    for (let i = 0; i < selected.length; i++) { 
+      if (selected[i] === value) { 
+          selected.splice(i, 1);
+      }
+    }
+
+    console.log('selected', selected);
+    if (selected.length === 0) {
+      addToSelected('All');
+    }
+  }
+
+  const removeFromSelectedPrice = (value) => {
+    console.log('Price', selectedPrice);
+
+    for (let i = 0; i < selectedPrice.length; i++) {
+      if (JSON.stringify(selectedPrice[i]) === JSON.stringify(value.split(","))) {
+        console.log('correct', selectedPrice.splice(i, 1), selectedPrice[i]);
+        selectedPrice.splice(i, 1);
+        console.log('Price', selectedPrice);
+      }
+    }
+    console.log('selectPrice', selectedPrice);
+  }
+
+
+  const filterAdd = (value) => {
+    // Filter for Gender
+    const filterdata = [];
+
+    console.log('select', selected);
+    addToSelected(value);
+    console.log('selected', selected);
+
+    const select = selected;
+    select.push(value);
+    console.log(select);
+
+    PRODUCTS.map((product) => {
+      const query = product.category.toLowerCase();
+      for (let i = 0; i < select.length; i++) {
+        if (filterdata.includes(product) === false) {
+          if (query.indexOf(select[i].toLowerCase()) !== -1) {
+            filterdata.push(product);
+          }
+        }
+      }
+    });
+    console.log('filter', filterdata);
+    setfilteredData(filterdata);
+  }
+
+  const filterAddPrice = (value) => {
+    // Filter for price
+    const filterdata = [];
+
+    console.log('selectPrice', selectedPrice);
+    addToSelectedPrice(value.split(","));
+    console.log('selectedPrice', selectedPrice);
+
+    const select = selectedPrice;
+    select.push(value.split(","));
+    console.log(select);
+
+    PRODUCTS.map((product) => {
+      const query = product.price;
+      for (let i = 0; i < selectedPrice.length; i++) {
+        // console.log(i, selected);
+        if (filterdata.includes(product) === false) {
+          if (query > parseInt(selectedPrice[i][0]) && query < parseInt(selectedPrice[i][1])) {
+            filterdata.push(product);
+          }
+        }
+      }
+    });
+    console.log('filter', filterdata);
+    setfilteredData(filterdata);
+  }
+
+  const filterRemove = (value) => {
+    // Filter remove gender 
+    let filterdata = [];
+
+    removeFromSelected(value);
+    const select = selected;
+    // select.push(value);
+    console.log(select);
+
+    filteredData.map((product) => {
+      const query = product.category.toLowerCase();
+      for (let i = 0; i < select.length; i++) {
+        if (query.indexOf(select[i].toLowerCase()) !== -1) {
+          filterdata.push(product);
+          console.log('filter', filterdata)
+        }
+      }
+    });
+
+    if (filterdata.length === 0) {
+      filterdata = PRODUCTS;
+    }
+
+    console.log('filter', filterdata);
+    setfilteredData(filterdata);
+  }
+
+  const filterRemovePrice = (value) => {
+    // filter Remove Price
+    let filterdata = [];
+
+    removeFromSelectedPrice(value);
+    console.log('selectedPrice', selectedPrice);
+    const select = selectedPrice;
+    // select.push(value);
+    console.log(select);
+
+    filteredData.map((product) => {
+      const query = product.price;
+      for (let i = 0; i < select.length; i++) {
+        if (filterdata.includes(product) === false) {
+          if ((query > parseInt(select[i][0]) && query < parseInt(select[i][1])) === true) {
+            filterdata.push(product);
+          }
+        }
+      }
+    });
+
+    if (filterdata.length === 0) {
+      filterdata = PRODUCTS;
+    }
+
+    console.log('filter', filterdata);
+    setfilteredData(filterdata);
   }
 
   // Create Context Value
@@ -134,10 +278,16 @@ export const Context = (props) => {
     addFavoriteItem,
     removeFavoriteItem,
     moveToCart,
+
+    filterAdd,
+    filterRemove,
+    filterAddPrice,
+    filterRemovePrice,
   };
 
-  console.log(cartItems);
-  console.log(favoriteItems);
+  console.log('çartItems', cartItems);
+  console.log('favouriteItems', favoriteItems);
+
   return (
     <CartContext.Provider value={contextValue}>
       {props.children}

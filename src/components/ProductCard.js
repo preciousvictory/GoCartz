@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/Context";
 import { Card, Row, Col } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import "../css/ProductCard.css";
 import { FaHeart, FaRegStar, FaShoppingCart, FaStar, FaStarHalfAlt  } from "react-icons/fa";
 // import { MdFavoriteBorder } from "react-icons/md";
@@ -11,9 +12,9 @@ const ProductCard = ({ item }) => {
   // cartItems,
   return (
       <Card className="card">
-        <Card.Img variant="top" src={item.image} className="card-img-top"/>
+        <Link to={`/GoCartz/products/${item.id}`} style={{textDecoration: 'none'}}><Card.Img variant="top" src={item.image} className="card-img-top"/></Link>
         <Card.Body className="p-2">
-          <Card.Title className="title">{item.title}</Card.Title>
+        <Link to={`/GoCartz/products/${item.id}`} style={{textDecoration: 'none'}}><Card.Title className="title">{item.title}</Card.Title></Link>
           <Card.Text className="price">${item.price}</Card.Text>
           <div className="rating">
             {Array.from({ length: 5 }).map((_, idx) => (

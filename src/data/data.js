@@ -1,7 +1,6 @@
 import product9 from '../assets/images/image9.jpg';
 import product13 from '../assets/images/image13.jpg';
 
-
 export const PRODUCTS = [
     {
         "id": 1,
@@ -66,7 +65,7 @@ export const PRODUCTS = [
         "prevPrice": 695,
         "color": "white",
         "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-        "category": "jewelery",
+        "category": "Jewelries",
         "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
         "rating": {
             "rate": 4.6,
@@ -80,7 +79,7 @@ export const PRODUCTS = [
         "prevPrice": 170.95,
         "color": "white",
         "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-        "category": "jewelery",
+        "category": "Jewelries",
         "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
         "rating": {
             "rate": 3.9,
@@ -94,7 +93,7 @@ export const PRODUCTS = [
         "prevPrice": 15.95,
         "color": "white",
         "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-        "category": "jewelery",
+        "category": "Jewelries",
         "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
         "rating": {
             "rate": 3,
@@ -108,7 +107,7 @@ export const PRODUCTS = [
         "prevPrice": 10.99,
         "color": "white",
         "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-        "category": "jewelery",
+        "category": "Jewelries",
         "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
         "rating": {
             "rate": 1.9,
@@ -122,7 +121,7 @@ export const PRODUCTS = [
         "prevPrice": 130.95,
         "color": "white",
         "description": "Best ready made gown, full flare",
-        "category": "electronics",
+        "category": "Gadgets",
         "image": product9,
         "rating": {
             "rate": 4.8,
@@ -136,7 +135,7 @@ export const PRODUCTS = [
         "prevPrice": 109.95,
         "color": "white",
         "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-        "category": "electronics",
+        "category": "Gadgets",
         "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
         "rating": {
             "rate": 4.3,
@@ -146,11 +145,11 @@ export const PRODUCTS = [
     {
         "id": 11,
         "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-        "price": 109,
+        "price": 1090,
         "prevPrice": 135.95,
         "color": "white",
         "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-        "category": "electronics",
+        "category": "Gadgets",
         "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
         "rating": {
             "rate": 4.8,
@@ -164,7 +163,7 @@ export const PRODUCTS = [
         "prevPrice": 116,
         "color": "white",
         "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-        "category": "electronics",
+        "category": "Gadgets",
         "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
         "rating": {
             "rate": 4.8,
@@ -178,7 +177,7 @@ export const PRODUCTS = [
         "prevPrice": 45.29,
         "color": "white",
         "description": "5 Inch heels easy  and comfortable to wear",
-        "category": "Fashion Female shoe heel",
+        "category": "Fashion Female shoes heels",
         "image": product13,
         "rating": {
             "rate": 3.7,
@@ -192,7 +191,7 @@ export const PRODUCTS = [
         "prevPrice": 999.99,
         "color": "white",
         "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
-        "category": "electronics",
+        "category": "Gadgets",
         "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
         "rating": {
             "rate": 2.2,
@@ -202,7 +201,7 @@ export const PRODUCTS = [
     {
         "id": 15,
         "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-        "price": 56.99,
+        "price": 556.99,
         "prevPrice":60.95,
         "color": "white",
         "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
@@ -216,7 +215,7 @@ export const PRODUCTS = [
     {
         "id": 16,
         "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-        "price": 29.95,
+        "price": 129.95,
         "prevPrice": 29.95,
         "color": "white",
         "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
@@ -258,7 +257,7 @@ export const PRODUCTS = [
     {
         "id": 19,
         "title": "Opna Women's Short Sleeve Moisture",
-        "price": 7.95,
+        "price": 77.95,
         "prevPrice": 8.85,
         "color": "white",
         "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
@@ -282,5 +281,33 @@ export const PRODUCTS = [
             "rate": 3.6,
             "count": 145
         }
-    }
+    },
+    {
+        "id": 21,
+        "title": "DANVOUY kid T Shirt Casual Cotton Short",
+        "price": 120.99,
+        "prevPrice": 15.95,
+        "color": "white",
+        "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+        "category": "kid children clothing",
+        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+        "rating": {
+            "rate": 3.6,
+            "count": 145
+        }
+    },
+    {
+        "id": 22,
+        "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+        "price": 39.85,
+        "prevPrice": 12.99,
+        "color": "white",
+        "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+        "category": "kid children clothing",
+        "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 130
+        }
+    },
 ]

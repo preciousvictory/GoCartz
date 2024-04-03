@@ -2,7 +2,7 @@ import React from "react";
 import { useContext, useState, useRef } from "react";
 import { useClickAway } from "react-use";
 import { LinkContainer } from 'react-router-bootstrap';
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useDimensions } from "./useDimensions";
 import { CartContext } from '../context/Context';
 import { Nav, Navbar, Container } from "react-bootstrap";
@@ -57,18 +57,21 @@ const NavMobile = () => {
       <Navbar ref={ref} expand="lg" className="NavMobile lg:hidden">
         <Container>
           <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
+          <AnimatePresence>
           {isOpen && (
             <motion.nav
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
                 custom={innerHeight}
                 ref={containerRef}
+                className="w-full p-[0.08rem] rounded-xl bg-gradient-to-tr from-neutral-800 via-neutral-950 to-neutral-700"
               >
               <motion.div className="background" variants={sidebar} />
               <SideBar />
               {/* <MenuToggle toggle={() => toggleOpen()} /> */}
             </motion.nav>
           )}
+          </AnimatePresence>
 
           <LinkContainer to="/GoCartz">
             <Navbar.Brand href="#home" className="logo">

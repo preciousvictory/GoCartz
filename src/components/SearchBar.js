@@ -9,7 +9,7 @@ import { PRODUCTS } from '../data/data.js';
 export function SearchBar() {
     const { searchValue, setSearchValue, setfilteredData } = useContext(CartContext);
 
-    console.log(searchValue);
+    // console.log(searchValue); 
 
     const handleSearch = (e) => {
         e.preventDefault();

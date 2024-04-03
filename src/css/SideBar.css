@@ -75,13 +75,13 @@ input[type='checkbox'] {
         top: 62px;
         z-index: 100;
         /* overflow: scroll; */
-        font-size: 10px;
+        font-size: 11px;
         /* background-color: #1F1F25; */
         /* color: #1F1F25; */
         /* color: #F88A24; */
     }
     .category p {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .sidebar h4 {

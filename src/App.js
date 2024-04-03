@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Cart from './pages/cart';
 import Home from './pages/home';
 import Likes from './pages/likes';
+import SingleProduct from './pages/SingleProduct'
 
 function App() {
   return (
@@ -15,12 +16,13 @@ function App() {
           <Navbar />
 
           <Routes> 
-            <Route path='/GoCartz' element={<Home />} />
+            <Route path='/GoCartz' element={<Home />} forceRefresh={true}/>
+            <Route path='/GoCartz/category/:category' element={<Home />} />
+            <Route path='/GoCartz/products/:id' element={<SingleProduct />} />
             <Route path='/GoCartz/likes' element={<Likes />} />
             <Route path='/GoCartz/cart' element={<Cart />} />
             <Route path='/GoCartz/user' element={<Home />} />
           </Routes>
-
         </Router>
       </Context>
     </div>
