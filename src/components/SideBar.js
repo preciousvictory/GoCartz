@@ -84,8 +84,9 @@ export function Category() {
           className='FilterByCategory'
           to={`/GoCartz/category/${category.cate.toLowerCase()}`}
           style={{textDecoration: 'none'}}
+          key={category.cate}
         >
-          <Button className="category_btn s" key={category.cate} value={category.cate} id="button-addon1" onClick={handleChange}>
+          <Button className="category_btn s" value={category.cate} id="button-addon1" onClick={handleChange}>
             <category.icon />
             <p>{category.cate}</p>
           </Button>

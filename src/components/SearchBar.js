@@ -20,7 +20,7 @@ export function SearchBar() {
               filterdata.push(product);
             }
         })
-        console.log('filter', filterdata)
+        // console.log('filter', filterdata)
         setfilteredData(filterdata);
     }
 

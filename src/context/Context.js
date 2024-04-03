@@ -31,14 +31,15 @@ export const Context = (props) => {
   const [selected, setSelected] = useState(['All']);
   const [selectedPrice, setSelectedPrice] = useState([]);
 
-
-
   // console.log("data", filteredData);
   // console.log('category', selectedCategory);
 
   const loadUserData = async () => {
     setfilteredData(PRODUCTS);
-    setSelectedCategory('');
+    setSelectedCategory("");
+    setSearch("");
+    setSelected(['All']);
+    setSelectedPrice([]);
   };
 
   const addToCart = (itemID) => {
